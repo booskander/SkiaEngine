@@ -1,11 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
+        <OutputType>exe</OutputType>
         <TargetFramework>net9.0-windows</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-	<UseWindowsForms>true</UseWindowsForms>
+        <UseWindowsForms>true</UseWindowsForms>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="SkiaSharp" Version="3.119.0" />
+      <PackageReference Include="SkiaSharp.Views" Version="3.119.0" />
+      <PackageReference Include="SkiaSharp.Views.Desktop.Common" Version="3.119.0" />
+      <PackageReference Include="SkiaSharp.Views.WindowsForms" Version="3.119.0" />
+    </ItemGroup>
 
 </Project>

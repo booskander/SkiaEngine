@@ -1,3 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using SkiaEngine.Create2D;
 
-Console.WriteLine("Hello, World!");
+var engine = new Create2DEngine();
