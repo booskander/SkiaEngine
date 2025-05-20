@@ -25,19 +25,23 @@ internal class Create2DEngine
         Application.Run(window);
     }
 
+    // this thread is used to force refresh
     void Looper()
     {
         while (true)
         {
             Console.WriteLine("inside the looper thread");
             glControl.Invalidate();
-            Thread.Sleep(1);
         }
     }
 
     private void Renderer(object? sender, SKPaintGLSurfaceEventArgs e)
     {
-        
+        e.Surface.Canvas.Clear(SKColors.DarkGray);
+        e.Surface.Canvas.DrawCircle(new SKPoint(50, 50), 50, new SKPaint()
+        {
+            Color = SKColors.Brown,
+        });
     }
 
     private void Window_Resize(object sender, EventArgs e)
